@@ -1,34 +1,30 @@
-// Mostre no console cada parágrafo do site
+// Adicione a classe ativo a todos os itens do menu
 
- const todosospNL = window.document.querySelectorAll('p')
- todosospNL.forEach((item) => {
-     console.log(item)
- })
-
-// for(c=0; c < todosospNL.length ;c++){
-//     console.log(todosospNL[c])
-// }
-
-// Mostre o texto dos parágrafos no console
-
-todosospNL.forEach((item) => {
-    console.log(item.innerText)
+const itensmenua = window.document.querySelectorAll('.menu a')
+itensmenua.forEach((item) => {
+    item.classList.add('ativo')
+    console.log(item.classList)
 })
 
-// Como corrigir os erros abaixo:
-const imgs = document.querySelectorAll('img')
+// Remova a classe ativo de todos os itens do menu e mantenha apenas no primeiro
 
-imgs.forEach((item, index) => {
-    console.log(item, index)
+itensmenua.forEach((item) => {
+    item.classList.remove('ativo')
+})
+itensmenua[0].className = 'ativo'
+
+// Verifique se as imagens possuem o atributo alt
+
+const imagens = document.querySelectorAll('img')
+imagens.forEach((item) =>{
+    if(item.hasAttribute('alt')){
+        console.log('tem alt')
+    } else {
+        console.log('não tem')
+    }
 })
 
+// Modifique o href do link externo no menu
 
-let i = 0
-imgs.forEach(() => {
-    console.log(i++)
-})
-
-imgs.forEach(() => {
-    i++
-})
-console.log(i) 
+const linkexterno = document.querySelector('a[href^="https://"]')
+linkexterno.setAttribute('href', 'https://www.google.com/')
