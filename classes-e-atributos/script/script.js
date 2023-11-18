@@ -27,4 +27,4 @@ imagens.forEach((item) =>{
 // Modifique o href do link externo no menu
 
 const linkexterno = document.querySelector('a[href^="https://"]')
-linkexterno.setAttribute('href', 'https://www.google.com/')
+linkexterno.setAttribute('href', 'https://www.google.com/ ')
