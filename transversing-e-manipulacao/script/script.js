@@ -1,47 +1,21 @@
-// Quando o usuário clicar nos links internos do site,
-// adicione a classe ativo ao item, clicado e remova dos
-// demais itens caso eles possuam a mesma. Previna
-// o comportamento padrão desses links
+// Duplique o menu e adicione ele em copy
+const menu = document.querySelector('.menu')
 
-const todososlinks = document.querySelectorAll('a[href^="#"]')
+const copiamenu = menu.cloneNode(true)
 
-function clicou(event){
-    for(c = 0; c < todososlinks.length ;c++){
-    todososlinks[c].classList.toggle('ativo')
-    }
-    event.preventDefault()
-}
+const copy = document.querySelector('.copy')
+const pcopy = document.querySelector('.copy p')
+copy.insertBefore(copiamenu, pcopy)
+// Selecione o primeiro DT do dl de Faq
 
-todososlinks.forEach((link)=>{
-    link.addEventListener('click', clicou)
-})
+const faq = document.querySelector('.faq')
+const primeirodt = faq.children[1].children[0]
+console.log(primeirodt)
+// Selecione o DD referente ao primeiro DT
+const ddproximodoprimeirodt = primeirodt.nextElementSibling
+console.log(ddproximodoprimeirodt)
 
+// Substitua o conteúdo html de .faq pelo conteúdo html de .animais
 
-// Selecione todos os elementos do site começando a partir do body,
-// ao clique mostre exatamente quais elementos estão sendo clicados
-const tudo = window.document.querySelectorAll('*')
-function clicando(event){
-    console.log(event.currentTarget)
-    event.target.remove()
-}
-
-tudo.forEach((elemento)=>{
-elemento.addEventListener('click', clicando)
-})
-
-
-//Utilizando o código anterior, ao invés de mostrar no console,
-// remova o elemento que está sendo clicado, o método remove() remove um elemento
-
-
-
-// Se o usuário clicar na tecla (t), aumente todo o texto do site
-
-
-function pressionou(event){
-    if(event.key === 't'){
-       window.document.documentElement.classList.toggle('bodymaior')
-    }
-}
-
-window.document.body.addEventListener('keydown', pressionou)
+const animais = document.querySelector('.animais')
+faq.innerHTML = animais.innerHTML
