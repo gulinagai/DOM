@@ -19,6 +19,9 @@ body{
     color: rgba(247, 244, 244, 0.87);
     -webkit-font-smoothing: antialiased;
 }
+.bodymaior{
+    font-size: 150%;
+}
 .menu{
     grid-column: 3 / 5;
     margin-top: 2rem;
@@ -105,11 +108,11 @@ ul{
 }
 .animaislista::-webkit-scrollbar-thumb {
     background: #000B19;
-    border-left: 4px solid #BBD4E5;
-    border-right: 4px solid #BBD4E5;
+    border-left: 4px solid #8cbbd8;
+    border-right: 4px solid #8cbbd8;
 }
 .animaislista::-webkit-scrollbar-track{
-    background: #BBD4E5;
+    background: #8cbbd8;
 }
 .animaisdescricao{
     grid-column: 3;
