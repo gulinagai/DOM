@@ -15,7 +15,7 @@ muitofraco = #BBD4E5
 body{
     display: grid;
      grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
-    background: linear-gradient(to top, #011C41,#12314d, #8cbbd8 80%);
+    background: linear-gradient(to top, #011C41,#12314d, #8cbbd8 66%);
     color: rgba(247, 244, 244, 0.87);
     -webkit-font-smoothing: antialiased;
 }
