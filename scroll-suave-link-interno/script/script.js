@@ -60,3 +60,4 @@ function scrollarparasection(event){
 linksinternos.forEach((link)=>{
     link.addEventListener('click', scrollarparasection)
 })
+
