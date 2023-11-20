@@ -71,9 +71,7 @@ function animacaodoscroll(){
                 const sectionnotopocomp = (sectiontopo - telasessentaporc) < 0
                 if(sectionnotopocomp){
                     section.classList.add('ativo')
-                } else {
-                    section.classList.remove('ativo')
-                }
+                }  
             })
         }
         animaraoscroll()
