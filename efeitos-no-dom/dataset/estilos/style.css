@@ -213,14 +213,31 @@ body{
     margin-bottom: 0px;
 }
 }
-.jshtml .jstabcontent section {
+.jshtml [data-tab="content"] section {
     display: none;
 }
-.jshtml .jstabcontent section.ativo {
+.jshtml [data-tab="content"] section.ativo{
     display: block !important;
-    animation: show .5s forwards;
 }
-@keyframes show {
+.jshtml [data-tab="content"] section.ativo.show-right {
+    animation: show-right .5s forwards;
+}
+
+.jshtml [data-tab="content"] section.ativo.show-down {
+    animation: show-down .5s forwards;
+}
+
+@keyframes show-down {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes show-right {
     from {
         opacity: 0;
         transform: translate3d(-30px, 0, 0);
@@ -230,19 +247,19 @@ body{
         transform: translate3d(0, 0, 0);
     }
 }
-.jshtml .jsfaq dt::after {
+.jshtml [data-anime="accordion"] dt::after {
     content: '⬏';
     padding-left: 10px;
 }
-.jshtml .jsfaq dt.ativo::after {
+.jshtml [data-anime="accordion"] dt.ativo::after {
     content: '↴';
     padding-left: 10px;
 }
-.jshtml .jsfaq dd.ativo {
+.jshtml [data-anime="accordion"] dd.ativo {
     display: block;
     animation: slidedown .5s forwards;
 }
-.jshtml .jsfaq dd {
+.jshtml [data-anime="accordion"] dd {
     display: none
 }
 
@@ -256,12 +273,12 @@ body{
         max-height: 200px;
     }
 }
-.jshtml .jssection {
+.jshtml [data-anime="scroll"] {
     opacity: 0;
     transition: .3s;
     transform: translate3d(-30px, 0, 0);
 }
-.jshtml .jssection.ativo {
+.jshtml [data-anime="scroll"].ativo {
     opacity: 1;
     transition: .3s;
     transform: translate3d( 0, 0, 0);

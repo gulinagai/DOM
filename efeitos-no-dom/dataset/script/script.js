@@ -1,20 +1,23 @@
-function Naosei(){
-    this.cor = 'preto'
-    this.lados = 4
-}
+// Adicione um atributo data-anime="show-down" e
+// data-anime="show-right" a todas as section's
+// com descricao dos animais
 
-const nsei = new Naosei()
 
- const phtml = document.querySelector('p')
 
- const pjs = document.createElement('p')
 
- console.log(pjs.constructor.name)
- console.log(Object.getPrototypeOf(pjs))
+// Utilizando estes atributos, adicione a classe 
+// show-down ou show-right a sua respectiva section
+// assim que a mesma aparecer na tela (animacao tab)
 
- console.log(HTMLElement.hasOwnProperty('dataset'))
 
- console.log(Object.getPrototypeOf(HTMLParagraphElement.prototype))
 
- const div = document.querySelector('div')
- console.log(div.dataset)
+
+// No CSS faça com que show-down anime de cima para baixo
+// e show-right continue com a mesma animação da esquerda 
+// para a direita
+
+
+
+// Substitua todas as classes js- por data atributes.
+
+const secsanimaisdesc = document.querySelectorAll('div.animaisdescricao section')
