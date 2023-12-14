@@ -6,6 +6,7 @@ import iniciarmodal from './modules/modal.js'
 import iniciartooltip from './modules/tooltip.js'
 import iniciarDropdownMenu from './modules/dropdown-menu.js'
 import iniciarMenuMobile from './modules/menu-mobile.js'
+import iniciarAnimaNumeros from './modules/anima-numeros.js'
 
 initScrollSuave()
 animacaodoscroll()
@@ -15,4 +16,5 @@ iniciarmodal()
 iniciartooltip()
 iniciarDropdownMenu()
 iniciarMenuMobile()
+iniciarAnimaNumeros()
 
