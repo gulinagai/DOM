@@ -3,14 +3,6 @@ const cssTexto = document.querySelector('.css')
 const btn = document.querySelector('.btn')
 controles.addEventListener('change', handleChange)
 
-function handleChange(event) {
-    const name = event.target.name
-    const value = event.target.value
-    console.log(name, value)
-    handleStyle[name](value)
-    showCss(value)
-}
-
 const handleStyle = {
     element: btn,
     backgroundColor(value) {
@@ -41,6 +33,30 @@ const handleStyle = {
         this.element.style.fontSize = value + 'rem'
     },
 }
+
+
+function handleChange(event) {
+    const name = event.target.name
+    const value = event.target.value
+    console.log(name, value)
+    handleStyle[name](value)
+    showCss(value)
+    saveValues(name, value)
+}
+
+function saveValues (name, value) {
+    localStorage[name] = value 
+}
+
+function setValues () {
+    const properties = Object.keys(localStorage)
+    properties.forEach((property)=>{
+        controles.elements[property].value = localStorage[property]
+        handleStyle[property](localStorage[property])
+    })
+}
+setValues()
+
 
 function showCss(value) {
     cssTexto.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>')
